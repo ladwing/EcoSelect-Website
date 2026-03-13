@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>EcoSelect | Sustainable Shopping Made Easy</title>
+        <style>
+            :root {
+                --bg-main: #0f172a;
+                --bg-card: #1e293b;
+                --text-main: #f8fafc;
+                --text-muted: #94a3b8;
+                --emerald: #10b981;
+                --teal-gradient: linear-gradient(135deg, #4f46e5, #10b981);
+                --border-color: #334155;
+            }
+
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                background-color: var(--bg-main);
+                color: var(--text-main);
+                line-height: 1.6;
+            }
+
+            /* Navigation */
+            nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px 5%;
+                background-color: rgba(15, 23, 42, 0.95);
+                border-bottom: 1px solid var(--border-color);
+                position: sticky;
+                top: 0;
+                z-index: 100;
+            }
+            .logo {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                font-size: 26px;
+                font-weight: bold;
+                color: var(--emerald);
+                gap: 12px;
+            }
+            .logo img {
+                height: 40px;
+                width: auto;
+            }
+            .nav-links a {
+                color: var(--text-main);
+                text-decoration: none;
+                margin-left: 30px;
+                font-weight: 500;
+                transition: color 0.2s;
+            }
+            .nav-links a:hover {
+                color: var(--emerald);
+            }
+
+            /* Hero Section */
+            .hero {
+                text-align: center;
+                padding: 100px 20px 60px;
+                max-width: 900px;
+                margin: 0 auto;
+            }
+            .hero h1 {
+                font-size: 3.5rem;
+                margin-bottom: 20px;
+                line-height: 1.2;
+            }
+            .hero h1 span {
+                background: var(--teal-gradient);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            .hero p {
+                font-size: 1.2rem;
+                color: var(--text-muted);
+                margin-bottom: 40px;
+                max-width: 700px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .cta-btn {
+                background: var(--teal-gradient);
+                color: white;
+                padding: 15px 40px;
+                border-radius: 8px;
+                text-decoration: none;
+                font-size: 1.2rem;
+                font-weight: bold;
+                display: inline-block;
+                transition:
+                    transform 0.2s,
+                    box-shadow 0.2s;
+                border: none;
+                cursor: pointer;
+            }
+            .cta-btn:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+            }
+
+            /* Section Headers */
+            .section-title {
+                text-align: center;
+                font-size: 2.5rem;
+                margin: 80px 0 40px;
+                color: var(--text-main);
+            }
+
+            /* How It Works (3 Steps) */
+            .steps-container {
+                display: flex;
+                justify-content: center;
+                gap: 30px;
+                padding: 0 5%;
+                flex-wrap: wrap;
+            }
+            .step-card {
+                background: var(--bg-card);
+                padding: 40px 30px;
+                border-radius: 12px;
+                width: 300px;
+                text-align: center;
+                border: 1px solid var(--border-color);
+                position: relative;
+            }
+            .step-number {
+                background: var(--teal-gradient);
+                color: white;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+                font-size: 1.2rem;
+                position: absolute;
+                top: -20px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .step-card h3 {
+                color: var(--emerald);
+                margin-bottom: 15px;
+                margin-top: 10px;
+            }
+            .step-card p {
+                color: var(--text-muted);
+                font-size: 1rem;
+            }
+
+            /* Key Features */
+            .features {
+                display: flex;
+                justify-content: center;
+                gap: 30px;
+                padding: 20px 5%;
+                flex-wrap: wrap;
+            }
+            .feature-card {
+                background: transparent;
+                padding: 20px;
+                width: 320px;
+                text-align: left;
+            }
+            .feature-icon {
+                font-size: 35px;
+                margin-bottom: 15px;
+            }
+            .feature-card h3 {
+                color: var(--text-main);
+                margin-bottom: 10px;
+                font-size: 1.3rem;
+            }
+            .feature-card p {
+                color: var(--text-muted);
+                font-size: 1rem;
+            }
+
+            /* FAQ Section */
+            .faq-container {
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 0 20px;
+            }
+            .faq-item {
+                background: var(--bg-card);
+                border: 1px solid var(--border-color);
+                border-radius: 8px;
+                margin-bottom: 15px;
+                padding: 25px;
+            }
+            .faq-item h4 {
+                color: var(--emerald);
+                font-size: 1.1rem;
+                margin-bottom: 10px;
+            }
+            .faq-item p {
+                color: var(--text-muted);
+            }
+
+            /* Footer */
+            footer {
+                text-align: center;
+                padding: 50px 20px;
+                border-top: 1px solid var(--border-color);
+                color: var(--text-muted);
+                margin-top: 80px;
+                background-color: var(--bg-card);
+            }
+            footer a {
+                color: #38bdf8;
+                text-decoration: none;
+                margin: 0 15px;
+                transition: color 0.2s;
+            }
+            footer a:hover {
+                color: var(--text-main);
+            }
+
+            @media (max-width: 768px) {
+                .hero h1 {
+                    font-size: 2.5rem;
+                }
+                nav {
+                    flex-direction: column;
+                    gap: 15px;
+                }
+                .nav-links a {
+                    margin: 0 10px;
+                }
+                .step-card {
+                    margin-top: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <a href="#" class="logo">
+                <img src="logo.png" alt="EcoSelect Icon" />
+                EcoSelect
+            </a>
+            <div class="nav-links">
+                <a href="#how-it-works">How It Works</a>
+                <a href="#features">Features</a>
+                <a href="#faq">FAQ</a>
+            </div>
+        </nav>
+
+        <div class="hero">
+            <h1>Shop Smarter.<br /><span>Shop Greener.</span></h1>
+            <p>
+                An AI-powered Chrome extension that instantly finds sustainable,
+                eco-friendly alternatives for the products you browse online.
+            </p>
+            <a href="#" class="cta-btn">Add to Chrome (It's Free)</a>
+        </div>
+
+        <h2 class="section-title" id="how-it-works">How It Works</h2>
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <h3>Browse as Usual</h3>
+                <p>
+                    Visit your favorite online store. EcoSelect runs quietly in
+                    the background while you shop.
+                </p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <h3>Auto-Detection</h3>
+                <p>
+                    Open the extension. It automatically reads the product title
+                    of the item you are currently viewing.
+                </p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <h3>Discover Alternatives</h3>
+                <p>
+                    Instantly receive a list of highly-rated sustainable options
+                    complete with prices and direct links.
+                </p>
+            </div>
+        </div>
+
+        <h2 class="section-title" id="features">Powered by Advanced AI</h2>
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">🧠</div>
+                <h3>Contextual Understanding</h3>
+                <p>
+                    EcoSelect uses Google Gemini AI to understand exactly what
+                    you are shopping for, going beyond simple keyword matching
+                    to find true eco-friendly equivalents.
+                </p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📍</div>
+                <h3>Smart Localization</h3>
+                <p>
+                    Stop looking at products that cannot be shipped to you.
+                    EcoSelect specifically targets e-commerce platforms
+                    available in your region (whether you are shopping on Noon
+                    in the UAE or Amazon in Europe).
+                </p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Semantic Caching</h3>
+                <p>
+                    Our custom vector database ensures that popular searches are
+                    returned in milliseconds without redundant processing.
+                </p>
+            </div>
+        </div>
+
+        <h2 class="section-title" id="faq">Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <h4>Is EcoSelect really free?</h4>
+                <p>
+                    Yes. The extension is completely free to download and use.
+                </p>
+            </div>
+            <div class="faq-item">
+                <h4>Can I use my own API keys?</h4>
+                <p>
+                    Absolutely. Power users can input their own Gemini and
+                    Serper API keys in the extension's settings panel. These
+                    keys are stored securely on your local device.
+                </p>
+            </div>
+            <div class="faq-item">
+                <h4>Does this slow down my browser?</h4>
+                <p>
+                    Not at all. EcoSelect is designed to be incredibly
+                    lightweight and only activates when you open the popup on a
+                    supported e-commerce page.
+                </p>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 EcoSelect. Built for a sustainable future.</p>
+            <div style="margin-top: 20px">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="mailto:ecoselect.sustainable@gmail.com">Support</a>
+            </div>
+        </footer>
+    </body>
+</html>

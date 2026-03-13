@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Privacy Policy | EcoSelect</title>
+        <style>
+            :root {
+                --bg-main: #0f172a;
+                --bg-card: #1e293b;
+                --text-main: #f8fafc;
+                --text-muted: #94a3b8;
+                --emerald: #10b981;
+                --teal-gradient: linear-gradient(135deg, #4f46e5, #10b981);
+                --border-color: #334155;
+            }
+
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                background-color: var(--bg-main);
+                color: var(--text-main);
+                line-height: 1.6;
+            }
+
+            /* Navigation */
+            nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px 5%;
+                background-color: rgba(15, 23, 42, 0.95);
+                border-bottom: 1px solid var(--border-color);
+                position: sticky;
+                top: 0;
+                z-index: 100;
+            }
+            .logo {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                font-size: 26px;
+                font-weight: bold;
+                color: var(--emerald);
+                gap: 12px;
+            }
+            .logo img {
+                height: 40px;
+                width: auto;
+            }
+            .nav-links a {
+                color: var(--text-main);
+                text-decoration: none;
+                margin-left: 30px;
+                font-weight: 500;
+                transition: color 0.2s;
+            }
+            .nav-links a:hover {
+                color: var(--emerald);
+            }
+
+            /* Privacy Content */
+            .content-container {
+                max-width: 800px;
+                margin: 60px auto;
+                padding: 40px;
+                background-color: var(--bg-card);
+                border: 1px solid var(--border-color);
+                border-radius: 12px;
+            }
+            .content-container h1 {
+                font-size: 2.5rem;
+                margin-bottom: 10px;
+                color: var(--text-main);
+            }
+            .content-container .last-updated {
+                color: var(--emerald);
+                font-size: 0.95rem;
+                margin-bottom: 40px;
+                font-weight: bold;
+            }
+            .content-container h2 {
+                font-size: 1.5rem;
+                margin: 30px 0 15px;
+                color: var(--text-main);
+            }
+            .content-container p,
+            .content-container ul {
+                color: var(--text-muted);
+                margin-bottom: 15px;
+                font-size: 1.05rem;
+            }
+            .content-container ul {
+                padding-left: 20px;
+            }
+            .content-container li {
+                margin-bottom: 8px;
+            }
+            .content-container a {
+                color: #38bdf8;
+                text-decoration: none;
+            }
+            .content-container a:hover {
+                text-decoration: underline;
+            }
+
+            /* Footer */
+            footer {
+                text-align: center;
+                padding: 50px 20px;
+                border-top: 1px solid var(--border-color);
+                color: var(--text-muted);
+                margin-top: 80px;
+                background-color: var(--bg-card);
+            }
+            footer a {
+                color: #38bdf8;
+                text-decoration: none;
+                margin: 0 15px;
+                transition: color 0.2s;
+            }
+            footer a:hover {
+                color: var(--text-main);
+            }
+
+            @media (max-width: 768px) {
+                nav {
+                    flex-direction: column;
+                    gap: 15px;
+                }
+                .nav-links a {
+                    margin: 0 10px;
+                }
+                .content-container {
+                    margin: 30px 20px;
+                    padding: 25px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="EcoSelect Icon" />
+                EcoSelect
+            </a>
+            <div class="nav-links">
+                <a href="index.html#how-it-works">How It Works</a>
+                <a href="index.html#features">Features</a>
+                <a href="index.html#faq">FAQ</a>
+            </div>
+        </nav>
+
+        <div class="content-container">
+            <h1>Privacy Policy</h1>
+            <p class="last-updated">Last Updated: March 14, 2026</p>
+
+            <p>
+                At EcoSelect, your privacy is our priority. This Privacy Policy
+                outlines how we collect, use, and protect your information when
+                you use the EcoSelect Chrome Extension.
+            </p>
+
+            <h2>1. Information Collection and Permissions</h2>
+            <p>
+                EcoSelect is designed to be minimally invasive. We explicitly
+                request the following permissions to provide our core service:
+            </p>
+            <ul>
+                <li>
+                    <strong>activeTab and Host Permissions:</strong> We only
+                    read the product title from the page content when you
+                    actively open the extension on supported e-commerce websites
+                    (including Amazon, eBay, Walmart, Target, and regional
+                    stores like Noon).
+                </li>
+                <li>
+                    <strong>storage:</strong> We use local browser storage to
+                    save your basic extension settings and preferences.
+                </li>
+                <li>
+                    <strong>No Browsing History:</strong> We do not track,
+                    monitor, or store your general web browsing history. The
+                    extension only activates on specific product pages when
+                    explicitly opened.
+                </li>
+            </ul>
+
+            <h2>2. Information Usage</h2>
+            <p>
+                The product titles we collect are used exclusively to search for
+                sustainable alternatives. This data is sent to our secure
+                backend, processed to find eco-friendly matches, and returned to
+                your screen.
+            </p>
+
+            <h2>3. Data Storage, Security, and Retention</h2>
+            <p>
+                We take strict measures to ensure your data remains secure and
+                is not kept longer than necessary:
+            </p>
+            <ul>
+                <li>Search queries are hashed using SHA-256 before storage.</li>
+                <li>
+                    Raw query text is retained for debugging purposes only and
+                    is not linked to any user identifier, device, or account.
+                </li>
+                <li>Cached data is automatically deleted after 7 days.</li>
+                <li>
+                    <strong>Data Location:</strong> Our backend services are
+                    hosted on secure cloud infrastructure. Data processed by our
+                    extension is transferred to and stored in these environments
+                    solely for the purpose of fulfilling your search requests.
+                </li>
+            </ul>
+
+            <h2>4. Third-Party Services</h2>
+            <p>
+                To provide accurate results, EcoSelect interacts securely with
+                the following third-party services:
+            </p>
+            <ul>
+                <li>
+                    <strong>Google Gemini AI:</strong> Used to analyze product
+                    context and identify sustainable equivalents.
+                </li>
+                <li>
+                    <strong>Serper.dev:</strong> Used to securely search the web
+                    for live product links and pricing in your selected region.
+                </li>
+            </ul>
+
+            <h2>5. Your Rights and Contact</h2>
+            <p>
+                You have the right to understand how your data is used. If you
+                have any questions, concerns, or requests to delete specific
+                cached data, please contact us directly.
+            </p>
+            <p>
+                Email:
+                <a href="mailto:ecoselect.sustainable@gmail.com"
+                    >ecoselect.sustainable@gmail.com</a
+                >
+            </p>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 EcoSelect. Built for a sustainable future.</p>
+            <div style="margin-top: 20px">
+                <a href="index.html">Home</a>
+                <a href="mailto:ecoselect.sustainable@gmail.com">Support</a>
+            </div>
+        </footer>
+    </body>
+</html>
